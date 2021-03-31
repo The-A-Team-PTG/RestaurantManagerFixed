@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace resturantfixedmanager
+namespace RestaurantManager
 {
 	public class Product
 	{
@@ -13,9 +17,7 @@ namespace resturantfixedmanager
 			this.Name = name;
 			this.Quantity = quantity;
 		}
-		
-	
+
+
 	}
-
 }
-

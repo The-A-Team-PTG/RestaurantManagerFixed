@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace resturantfixedmanager
+namespace RestaurantManager
 {
-	public class Company
+	public class Company : Object
 	{
 		public string Name { get; set; }
 		public string Address { get; set; }
@@ -17,8 +21,10 @@ namespace resturantfixedmanager
 			this.MRP = mrp;
 
 		}
+
+		public override string ToString()
+		{
+			return $"Name:{this.Name}, address: {this.Address}, uin: {this.UIN}, mrp: {this.MRP}";
+		}
 	}
-
 }
-
-

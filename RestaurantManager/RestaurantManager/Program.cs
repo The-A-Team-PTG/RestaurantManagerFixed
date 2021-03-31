@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RestaurantManager
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var manager = new RestaurantManager();
+
+            var testRestaurant = new Restaurant("rest", "centera", "123123", "Pesho", 300.50M);
+            Console.WriteLine(testRestaurant);
+
+            while (true)
+            {
+                string line = Console.ReadLine();
+                string[] cmdParts = line.Split(" ");
+                string cmd = cmdParts[0];
+                switch (cmd)
+                {
+                    case "serveMeal":
+                        string name = cmdParts[1];
+                        List<Product> products = new List<Product>();
+                        for (int i = 2; i < cmdParts.Length - 1; i += 2)
+                        {
+                            string productName = cmdParts[i];
+                            double productQuantity = double.Parse(cmdParts[i + 1]);
+                            products.Add(new Product(productName, productQuantity));
+                        }
+                        string date = cmdParts[cmdParts.Length - 1];
+
+                        string result = manager.ServeMeal(name, products, date);
+                        Console.WriteLine(result);
+                        break;
+                    case "buyProduct":
+                        Console.WriteLine(manager.BuyProducts(cmdParts[1], double.Parse(cmdParts[2]),0));
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+}
