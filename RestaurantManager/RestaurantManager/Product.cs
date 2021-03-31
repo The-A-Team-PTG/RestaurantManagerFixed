@@ -1,25 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-<<<<<<< HEAD
-using System.Text;
-
-namespace RestaurantManager
-{
-    public class Product
-    {
-        public string name { get; private set; }
-
-        public double quantity { get;  set; }
-
-
-        public Product(string name , double  quantity)
-        {
-            this.name = name;
-            this.quantity = quantity;
-
-        }
-    }
-=======
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,5 +18,5 @@ namespace RestaurantManager
 
 
 	}
->>>>>>> feature/2-buyProduct
+
 }
