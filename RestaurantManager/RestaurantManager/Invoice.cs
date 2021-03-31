@@ -8,9 +8,9 @@ namespace RestaurantManager
 {
 	public class Invoice
 	{
-		public Company Costomer { get; set; }
-
-		public Company Supplier { get; set; }
+		public int Number {get; set;}
+		public ICompany Costomer { get; set; }
+		public ICompany Supplier { get; set; }
 
 	}
 }

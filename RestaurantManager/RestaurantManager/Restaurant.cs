@@ -16,9 +16,37 @@ namespace RestaurantManager
 		{
 			this.Capital = capital;
 		}
+		 
+		void IssueReceipt(ReceiptIssueable acc)
+			{
 
+			acc.IssueReceipt();
 
+				}
 
-	}
+		
+
+			void IssueInvoiceFromAccountant(InvoiceIssueable acc)
+			{
+
+			acc.IssueInvoice();
+
+				}
+
+		
+
+        public override string ToString()
+        {
+			this.IssueReceipt(new Accountant());
+			this.IssueReceipt(new Machine());
+			this.IssueReceipt(new Person());
+			this.IssueInvoiceFromAccountant(new Accountant());
+			this.IssueInvoiceFromAccountant(new InvoiceSoftware());
+             string return =base.ToString();
+			result +=$",capital={this.Capital}";
+
+			return result;
+        }
+    }
 
 }
