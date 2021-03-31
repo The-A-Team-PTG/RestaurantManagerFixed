@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
-=======
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> feature/2-buyProduct
 
 namespace RestaurantManager
 {
@@ -13,16 +10,15 @@ namespace RestaurantManager
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
+
 
             var manager = new RestaurantManager();
-=======
+
             var manager = new RestaurantManager();
 
             var testRestaurant = new Restaurant("rest", "centera", "123123", "Pesho", 300.50M);
             Console.WriteLine(testRestaurant);
 
->>>>>>> feature/2-buyProduct
             while (true)
             {
                 string line = Console.ReadLine();
@@ -30,7 +26,7 @@ namespace RestaurantManager
                 string cmd = cmdParts[0];
                 switch (cmd)
                 {
-<<<<<<< HEAD
+
                     case "ServeMeal":
                         string name = cmdParts[1];
                         List<Product> product = new List<Product>();
@@ -51,7 +47,7 @@ namespace RestaurantManager
                 
 
                 }
-=======
+
                     case "serveMeal":
                         string name = cmdParts[1];
                         List<Product> products = new List<Product>();
@@ -73,7 +69,7 @@ namespace RestaurantManager
                         break;
                 }
             }
->>>>>>> feature/2-buyProduct
+
         }
     }
 }
